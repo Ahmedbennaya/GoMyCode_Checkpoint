@@ -1,0 +1,103 @@
+function reverse(str) {
+  console.log(str.split('').reverse().join())
+}
+
+reverse("ahmed")
+////////////////////////////////////////////////////////////////////
+function count(str) {
+  console.log(str.split().join().length)
+  
+}
+
+count("aziheaiozuehaizuehiuazheiuaz")
+/////////////////////////////////////////////////////////////////
+function capitalizes(cap) {
+  cap=cap.split(" ")
+
+  for (let i = 0; i < cap.length; i++) {
+    cap[i]=cap[i].charAt(0).toUpperCase() + cap[i].slice(1);
+    
+  }
+  return cap.join(",")
+}
+let cap='ahme d be nn aya az ea ze a ze'
+console.log(capitalizes(cap))
+///////////////////////////////////////////////////////////
+
+
+
+function minAndMax(arr) {
+  
+  let miN=arr[0];
+  let mAx=arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+   if (arr[i]<miN) {
+    miN=arr[i]
+   } else if(arr[i]> mAx){
+    mAx=arr[i]
+   }
+    
+  }
+  return{miN , mAx}
+} 
+
+let array=[10,54,484,65,98,]
+let final=minAndMax(array)
+console.log(final.miN)
+console.log(final.mAx)
+
+function name(params) {
+  
+}
+
+let numbers= [19,25,35,12,41,23,5,41,3,5,4,21];
+
+
+let sum=0;
+let i=0;
+do {
+  sum +=numbers[i]
+  i+=1;
+} while (i< numbers.length);
+
+console.log(sum)
+
+function arrayFilter(arr, numbers) {
+  return arr.filter(numbers);
+  
+}
+let arRay = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let filteredArray = arrayFilter(arRay, num => num % 2 === 0);
+console.log(filteredArray); 
+filteredArray = arrayFilter(arRay, num => num >5)
+console.log(filteredArray); 
+//------------------------------------------------------
+
+function  numberCheck(number) {
+  if(number<=1){
+    return false
+  }
+
+for (let i = 2; i < number; i++) {
+  if (number % i===0){
+    return false;
+  }
+}
+return true
+}
+console.log(numberCheck(5))
+//********************************************************** */
+function factorial(number) {
+  if (number === 0 || number === 1) {
+   return 0;
+  } else {
+  let result = 1;
+  for (let i = 2; i <= number; i++) {
+  result *= i;
+  }
+   return result;
+  }
+}
+
+console.log(factorial(6))
