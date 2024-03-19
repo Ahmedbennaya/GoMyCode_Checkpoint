@@ -101,3 +101,20 @@ function factorial(number) {
 }
 
 console.log(factorial(6))
+function generateFibonacci(numTerms) {
+    let fibonacciSeq = [0, 1]; 
+
+   
+    for (let i = 2; i < numTerms; i++) {
+        let nextTerm = fibonacciSeq[i - 1] + fibonacciSeq[i - 2];
+        fibonacciSeq.push(nextTerm);
+    }
+
+    return fibonacciSeq;
+}
+
+
+const numTerms = 10;
+const fibonacciSequence = generateFibonacci(numTerms);
+console.log("Fibonacci Sequence:", fibonacciSequence);
+
